@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="icon" type="image/x-icon" href="D:\SteamLibrary\steamapps\common\ATLYSS\Save Editor\Save Editor 2\Images/icon.ico">
+<link rel="stylesheet" href="ASE.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Save Editor</title>
+    <title>ATLYSS Save Editor</title>
     <style>
+	
         body {
-            font-family: Arial, sans-serif;
+            font-family: Quantico, sans-serif;
             margin: 20px;
         }
         .file-list {
@@ -30,11 +36,20 @@
     </style>
 </head>
 <body>
+<div>
     <h1 id="title">Save Editor</h1>
     <label id="language-label">Select Language:</label>
     <select id="language-selector">
         <option value="en">English</option>
         <option value="zh">中文</option>
+		<option value="es">Español</option>
+		<option value="de">Deutsch</option>
+		<option value="ru">Русский</option>
+		<option value="fr">Français</option>
+		<option value="it">Italiano</option>
+		<option value="pl">Polski</option>
+		<option value="nl">Nederlands</option>
+		<option value="jp">日本語</option>
     </select>
     <br><br>
     <label id="config-label">Load Configuration File (JSON):</label>
@@ -93,7 +108,103 @@
                 loadConfigSuccess: "設定檔載入成功！",
                 loadConfigError: "設定檔載入失敗，請確認格式是否正確！",
                 noFileSelected: "請先選擇一個檔案！"
-            }
+            },
+			es: {
+                title: "Guardar Editor",
+                languageLabel: "Seleccionar Idioma:",
+                configLabel: "Cargar Archivo De Configuración (JSON):",
+                folderLabel: "Cargar Carpeta:",
+                fileListTitle: "Archivos Seleccionados:",
+                editorTitle: "Editar Contenido Del Archivo:",
+                saveButton: "Descargar Archivo Modificado",
+                loadConfigSuccess: "¡La configuración se cargó correctamente!",
+                loadConfigError: "No se pudo cargar la configuración. ¡Por favor verifique el formato del archivo!",
+                noFileSelected: "Archivo no encontrado, Por Favor ¡seleccione un archivo primero!"
+			},
+			de: {
+                title: "Editor speichern",
+                languageLabel: "Sprache auswählen:",
+                configLabel: "Konfigurationsdatei (JSON) laden:",
+                folderLabel: "Ordner laden:",
+                fileListTitle: "Ausgewählte Dateien:",
+                editorTitle: "Dateiinhalt bearbeiten:",
+                saveButton: "Geänderte Datei herunterladen",
+                loadConfigSuccess: "Konfiguration erfolgreich geladen!",
+                loadConfigError: "Die Konfiguration konnte nicht geladen werden. Bitte überprüfen Sie das Dateiformat!",
+                noFileSelected: "Bitte wählen Sie zuerst eine Datei aus!"
+			},
+			ru: {
+                title: "Редактор сохранений",
+                languageLabel: "Выберите язык:",
+                configLabel: "",
+                folderLabel: "",
+                fileListTitle: "",
+                editorTitle: "",
+                saveButton: "",
+                loadConfigSuccess: "",
+                loadConfigError: "",
+                noFileSelected: ""
+			},
+			fr: {
+                title: "Enregistrer l'éditeur",
+                languageLabel: "Sélectionnez la langue :",
+                configLabel: "",
+                folderLabel: "",
+                fileListTitle: "",
+                editorTitle: "",
+                saveButton: "",
+                loadConfigSuccess: "",
+                loadConfigError: "",
+                noFileSelected: ""
+			},
+			it: {
+                title: "Salva editore",
+                languageLabel: "Seleziona la lingua:",
+                configLabel: "Carica file di configurazione (JSON):",
+                folderLabel: "Carica cartella:",
+                fileListTitle: "File selezionati:",
+                editorTitle: "Modifica il contenuto del file:",
+                saveButton: "Scarica il file modificato",
+                loadConfigSuccess: "Configurazione caricata con successo!",
+                loadConfigError: "Impossibile caricare la configurazione. Si prega di controllare il formato del file!",
+                noFileSelected: "File non trovato. per favore seleziona prima un file!"
+			},
+			pl: {
+                title: "Zapisz edytor",
+                languageLabel: "Wybierz język:",
+                configLabel: "Wczytaj plik konfiguracyjny (JSON):",
+                folderLabel: "Wczytaj folder:",
+                fileListTitle: "Wybrane pliki:",
+                editorTitle: "Edytuj zawartość pliku:",
+                saveButton: "Pobierz zmodyfikowany plik",
+                loadConfigSuccess: "Konfiguracja została załadowana pomyślnie!",
+                loadConfigError: "Nie można załadować konfiguracji. Sprawdź format pliku!",
+                noFileSelected: "Nie znaleziono pliku. Najpierw wybierz plik!"
+			},
+			nl: {
+                title: "Redacteur opslaan",
+                languageLabel: "Taal selecteren:",
+                configLabel: "",
+                folderLabel: "",
+                fileListTitle: "",
+                editorTitle: "",
+                saveButton: "",
+                loadConfigSuccess: "",
+                loadConfigError: "",
+                noFileSelected: ""
+			},
+			jp: {
+				title: "セーブエディター",
+                languageLabel: "言語を選択してください:",
+                configLabel: "",
+                folderLabel: "",
+                fileListTitle: "",
+                editorTitle: "",
+                saveButton: "",
+                loadConfigSuccess: "",
+                loadConfigError: "",
+                noFileSelected: ""
+			},
         };
 
         // Update text content based on selected language
@@ -272,5 +383,6 @@
         // Initialize
         updateLanguage();
     </script>
+	</div>
 </body>
 </html>
